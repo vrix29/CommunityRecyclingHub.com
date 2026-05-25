@@ -1,0 +1,174 @@
+<html>
+    <head>
+        <title>Interactive Map – Recycling Stations | Hunter Region</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Leaflet CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    </head>
+    <body>
+
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="wrap-logo">
+                        <img src="Images/logo.jpg" alt="logo" class="header-logo">
+                    </div>
+                    <div class="wrap-navigation">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Data.html">Data</a></li>
+                            <li><a href="map.html" class="nav-active">Interactive Map</a></li>
+                            <li><a href="media.html">Media</a></li>
+                            <li><a href="about.html">About</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Page Intro Banner -->
+        <div class="map-page-banner">
+            <div class="container">
+                <h1 class="main-text-color">Recycling Stations in the Hunter Region</h1>
+                <p class="main-p-color">
+                    Find your nearest recycling drop-off station across Newcastle, Lake Macquarie, Maitland,
+                    Cessnock, Singleton, Muswellbrook, and Port Stephens. Click any pin to see the station name,
+                    address, and accepted materials.
+                </p>
+            </div>
+        </div>
+
+        <!-- Map + Sidebar Layout -->
+        <div class="container map-layout">
+
+            <!-- Sidebar -->
+            <aside class="map-sidebar">
+                <div class="sidebar-section">
+                    <h2 class="main-text-color">Map Legend</h2>
+                    <div class="legend-item">
+                        <span class="legend-dot dot-green"></span>
+                        <span>Resource Recovery Centre</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot dot-blue"></span>
+                        <span>Community Drop-Off Point</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot dot-orange"></span>
+                        <span>E-Waste Collection</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h2 class="main-text-color">What Can I Drop Off?</h2>
+                    <ul class="sidebar-list">
+                        <li>Paper &amp; cardboard</li>
+                        <li>Glass bottles &amp; jars</li>
+                        <li>Plastic containers (1–7)</li>
+                        <li>Steel &amp; aluminium cans</li>
+                        <li>Green waste &amp; compost</li>
+                        <li>Electronics (Devices)</li>
+                        <li>E-waste (phones, TVs, computers)</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h2 class="main-text-color">Tips Before You Go</h2>
+                    <ul class="sidebar-list">
+                        <li>Rinse containers before dropping off</li>
+                        <li>Keep lids on bottles &amp; jars</li>
+                        <li>Flatten cardboard boxes</li>
+                        <li>Bag loose soft plastics separately</li>
+                        <li>Check opening hours before visiting</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Map -->
+            <div class="map-wrapper">
+                <div id="recycling-map"></div>
+            </div>
+
+        </div>
+
+        <!-- Info Cards Section -->
+        <div class="map-info-section">
+            <div class="container">
+                <h2 class="main-text-color section-heading">About Hunter Region Recycling</h2>
+                <div class="map-info-cards">
+
+                    <div class="map-info-card">
+                        <div class="map-info-icon">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Green-check-mark.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+                             width="40" height="40" alt="Green Check" class="info-icon-img">
+                        </div>
+                        <h3>Resource Recovery Centres</h3>
+                        <p>
+                            Major facilities operated by councils such as Newcastle City Council, Lake Macquarie City
+                            Council, and Maitland City Council. These centres accept a wide range of household waste
+                            and separate materials for reuse or recycling.
+                        </p>
+                    </div>
+
+                    <div class="map-info-card">
+                        <div class="map-info-icon">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Green-check-mark.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+                             width="40" height="40" alt="Green Check" class="info-icon-img">
+                        </div>
+                        <h3>Kerbside Recycling</h3>
+                        <p>
+                            Most homes in the Hunter Region have a yellow-lid bin for recycling collected fortnightly.
+                            Materials are sorted at a Materials Recovery Facility (MRF) and sent to manufacturers
+                            to be made into new products.
+                        </p>
+                    </div>
+
+                    <div class="map-info-card">
+                        <div class="map-info-icon">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Green-check-mark.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+                             width="40" height="40" alt="Green Check" class="info-icon-img">
+                        </div>
+                        <h3>E-Waste Drop-Off</h3>
+                        <p>
+                            Since July 2022, e-waste is banned from NSW landfill. Drop off old electronics at
+                            dedicated e-waste points for free. Items include TVs, computers, phones, printers,
+                            and small appliances.
+                        </p>
+                    </div>
+
+                    <div class="map-info-card">
+                        <div class="map-info-icon">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Green-check-mark.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+                             width="40" height="40" alt="Green Check" class="info-icon-img">
+                        </div>
+                        <h3>Green Waste Composting</h3>
+                        <p>
+                            Garden and food scraps collected through the lime-green lid bin or dropped at a
+                            resource recovery centre are processed into compost — keeping organic matter out
+                            of landfill and improving local soils.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container footer-flex">
+                <div>
+                    <img src="Images/Green_Recycling_Logo.png" alt="logo" class="header-logo">
+                </div>
+                <p style="color: white;">Contact us: support@communityrecycling.hub.com</p>
+                <p style="color: white;">2026 Recycling Community Project. (All rights reserved.)</p>
+            </div>
+        </footer>
+
+        <!-- Leaflet JS -->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <script src="Script/map.js"></script>
+
+    </body>
+</html>

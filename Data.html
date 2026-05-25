@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <title>Recycling Data – Hunter Region | Community Recycling</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="wrap-logo">
+                        <img src="Images/logo.jpg" alt="logo" class="header-logo">
+                    </div>
+                    <div class="wrap-navigation">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Data.html" class="nav-active">Data</a></li>
+                            <li><a href="map.html">Interactive Map</a></li>
+                            <li><a href="media.html">Media</a></li>
+                            <li><a href="about.html">About</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Page Banner -->
+        <div class="map-page-banner">
+            <div class="container">
+                <h1 class="main-text-color">Recycling Data &amp; Statistics</h1>
+                <p class="main-p-color">
+                    Real figures from the Hunter Region and other schools in NSW show how much recycling is happening,
+                    what ends up with our bins, and how to improve those habits in our community.
+                </p>
+            </div>
+        </div>
+
+        <!-- Quick Stat Cards -->
+        <div class="data-stat-bar">
+            <div class="container data-stat-cards">
+                <div class="stat-card">
+                    <div class="stat-number">31-44%</div>
+                    <div class="stat-label">Hunter Region - Resource recovery rate increase</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">55%</div>
+                    <div class="stat-label">Waste that's being diverted from landfill (In Lake Macquarie)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">25%</div>
+                    <div class="stat-label">Councils that manage recycling programs, most waste form business.</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">66%</div>
+                    <div class="stat-label">Overall recycling rate in NSW (2024-2025)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="container data-charts-section">
+
+            <div class="data-chart-block">
+                <h2 class="main-text-color chart-title">Edmund Rice College (ERC) Waste Aduit 2023 Data</h2>
+                <p class="main-p-color chart-subtitle">
+                    From this Pie graph below, we can see the overall percentage how recycling was organised to
+                    different bins at ERC. 
+                    This data was collected by Mrs Schoddle in the year 2023. Based on the results,
+                    Over half of what people throw in the general bin could be composted or recycled. 
+                </p>
+                <div class="chart-canvas-wrap">
+                    <canvas id="pieChart"></canvas>
+                </div>
+                <p class="chart-source">Source: Edmund Rice College's own waste audit (primary data) (2023)</p>
+            </div>
+
+            <div class="data-chart-block">
+                <h2 class="main-text-color chart-title">Edmund Rice College (ERC) Sustainability Waste Audit</h2>
+                <p class="main-p-color chart-subtitle">
+                    This bar graph was made in the April 6, 2023 by Mrs Schoddle. Based on the results, it reveals
+                     three different bins to reduce the amount of waste in the school. The general waste bins, 
+                    the return and earn bins, and blue paper recycling bins near the classrooms or certain areas
+                    of the school.
+                </p>
+                <div class="chart-canvas-wrap">
+                    <canvas id="barChart"></canvas>
+                </div>
+                <p class="chart-source">Source: Edmund Rice College's own waste audit (primary data) (2023)</p>
+            </div>
+
+        </div>
+
+        <!-- Analysis Section -->
+        <div class="data-analysis-section">
+            <div class="container">
+                <h2 class="main-text-color section-heading">Improvements on Recycling</h2>
+
+                <div class="analysis-grid">
+
+                    <div class="analysis-card">
+                        <h3>Edmund Rice College (ERC)</h3>
+                        <p>
+                            Based on the data and infomation, <strong>Edmund Rice College</strong> manage recycling programs through a hands-on approach
+                            binnual waste audits like the <strong>ECO-ERC student team </strong>that collects, weighs, and organize the waster into different 
+                            categories. THis is because Students volunteer to learn and help with recycling by analyzing waste data to
+                            improve recycling, reduce contamination, and increase the usage of recycling bins across the school. 
+                        </p>
+                    </div>
+
+                    <div class="analysis-card">
+                        <h3>Trinity Catholic College (Adamstown)</h3>
+                        <p>
+                            The <strong>Trinity Catholic College</strong> handles the situation by collecting and transforming the waste into different categories
+                            by students who are interested, making them into products such as 'robots', 'metal', 'wood', and 'jewellery'. For classrooms,
+                            they specifically add bins for paper and carboard, with selected classrooms ultilising compost bins for food scrap materials.
+                            In addition with the help of a <strong>Fantastic Plastic Club</strong>, they focus on turning other plastic waste into new,
+                            sustainable products. 
+                        </p>
+                    </div>
+
+                    <div class="analysis-card">
+                        <h3>St Mary's Catholic College (Gateshead)</h3>
+                        <p>
+                            The <strong>St Mary's Catholic College</strong> manages recycling through a student-led stewardship program, focusing on waste reduction
+                            and recycling. Major projects inluce a <strong>'Return and Earn' program, composting and the use of sustainable, reusable resources</strong> in their cafe
+                            to minimise landfill waste. Behind the scenes, exercising stweardship means caring for the gifts God has given us, including the environment,
+                            talents, and resources. Students are encouraged to take responsibility for their actions and decision on making a positive impact on the world
+                            around them and their school community.
+                            
+          
+                        </p>
+                    </div>
+
+                    <div class="analysis-card">
+                        <h3>St Francis Xavier's College (Edmondson Park)</h3>
+                        <p>
+                             St Francis Xavier's College faces the same challenges seen across NSW, they manage their recycling through a student-led environmental club (SEALS) 
+                             and participating in the <strong>'Return and Earn' program</strong>. They use a house-base competition to not just to organise waste successfully but also to 
+                             encourage students to into collecting bottles and cans for donation to charity.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container footer-flex">
+                <div>
+                    <img src="Images/Green_Recycling_Logo.png" alt="logo" class="header-logo">
+                </div>
+                <p style="color: white;">Contact us: support@communityrecycling.hub.com</p>
+                <p style="color: white;">2026 Recycling Community Project. (All rights reserved.)</p>
+            </div>
+        </footer>
+
+        <!-- Chart.js CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+        <script src="Script/data-charts.js"></script>
+
+    </body>
+</html>
